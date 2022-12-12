@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head> <!-- thẻ chứa dữ liệu , chứa các thẻ liên quan tới file khác ko phải html -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>VanillaJS • TodoMVC</title> <!-- tiêu đề -->
+    <link rel="stylesheet" href="style/base.css"> <!-- lấy file base.css -->
+  </head>
+  <body> <!-- xác định phần thân , bố cục của file HTML -->
+    <section id="todoapp"> <!-- thẻ này sử dụng để phân chia trang thành từng đoạn , từng khúc -->
+      <header id="header"> <!-- phần đầu trang của section --> 
+	<h1>todos</h1> <!-- Thẻ chứa text - thường là tiêu đề đầu tiên -->
+	<input id="new-todo" placeholder="What needs to be done?" autofocus> <!-- thẻ này là khung nhập liệu dùng để nhập text -->
+      </header>
+      <section id="main">
+	<ul id="todo-list"></ul>
+      </section>
+      <footer id="footer"> <!-- Phần chân trang , vì đang trong thẻ của footer nên đây là phần chân trang footer -->
+	<span id="todo-count"></span> <!-- thẻ này sẽ nối các thẻ ở dưới với nhau - giúp các thẻ ở dưới chung 1 định dạng với file CSS -->
+        <div id="sync-wrapper">
+          <div id="sync-success">Currently syncing</div>
+          <div id="sync-error">There was a problem syncing</div>
+        </div>
+      </footer>
+    </section>
+    <footer id="info">
+      <p>Double-click to edit a todo</p>
+      <p>Template by <a href="http://github.com/sindresorhus">Sindre Sorhus</a></p>
+      <p>Created by <a href="http://twitter.com/ffesseler">Florian Fesseler</a></p>
+      <p>Cleanup, edits by <a href="http://github.com/boushley">Aaron Boushley</a></p>
+    </footer>
+    <script src="//cdn.jsdelivr.net/pouchdb/3.0.2/pouchdb.min.js"></script> <!-- thẻ kết nối file html với file javascript -->
+    <script src="js/base.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
+<!-- các thẻ id là sử dụng value trong file CSS --
